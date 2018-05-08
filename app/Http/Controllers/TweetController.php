@@ -2,11 +2,9 @@
 /*crud dos tweets*/
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Auth;
 use App\Tweet;
-use Session;
+use Illuminate\Http\Request;
 
 class tweetController extends Controller
 {
@@ -17,9 +15,7 @@ class tweetController extends Controller
      */
     public function index()
     {
-        $tweets = Tweet::all();
-
-        return view('pages.welcome')->withTweets($tweets);
+       
     }  
 
     /**
@@ -29,7 +25,7 @@ class tweetController extends Controller
      */
     public function create()
     {
-        return view('pages.welcome');
+      
     }
 
     /**
@@ -40,19 +36,15 @@ class tweetController extends Controller
      */
     public function store(Request $request)
     {
-        //script de validação
-        $this->validate($request, array(
-            'id' => 'required',
-            'content' => 'required|max:255'
-        ));
-        //armazena no banco
+        $this->validate(request(), [
+            'content' => 'required|min:5'
+        ]);
+
         $tweet = new Tweet;
-        $tweet->user_id = $request->id;
+        $tweet->user_id = Auth::user()->id;
         $tweet->content = $request->content;
-        $tweet->save();
-        Session::flash('success','O tweet do blog foi salvo com sucesso');/*video 13  - 9 minutos */
-        
-        return view('pages.welcome');
+        $tweet->save();  
+        return redirect()->route('home');
         
     }
     /**
@@ -63,9 +55,7 @@ class tweetController extends Controller
      */
     public function show($id)
     {
-        $tweet = Tweet::find($id);
-        return view('pages.welcome')->withTweet($tweet);   
-    /*aula 14 ,finalzim */
+  
     }
 
     /**
@@ -76,8 +66,7 @@ class tweetController extends Controller
      */
     public function edit($id)
     {
-        $tweet = tweet::find($id);
-        return view('tweets.edit')->with('tweet',$tweet);
+     
     }
 
     /**
@@ -101,7 +90,7 @@ class tweetController extends Controller
      */
     public function destroy($id)
     {
-        $tweet = tweet::find($id);
+        $tweet = Tweet::find($id);
 
         $tweet->delete();
 

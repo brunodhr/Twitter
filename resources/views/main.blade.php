@@ -3,7 +3,6 @@
 <!--yield busca as partes que terão em pages , o conteudo de cada pagina em si-->
 <!--Teste outra linguagem-->
 <html lang="en">
-  
   @include('partials._head')
   
   <body>
@@ -22,11 +21,9 @@
         @include('partials._footer')
 
       </div>
-          
       <!--inclui todos javascripts//que terão o mesmo efeito em todas paginas-->
       @include('partials._javascript')
         <!--inclui os javascripts que tem em paginas particulares-->
        @yield('scripts')
-        
   </body>
 </html>
