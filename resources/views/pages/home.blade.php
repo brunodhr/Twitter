@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-2">
-            <div class="card border-dark">
-                <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="card-img-top" >
+            <div class="card-header">
+                <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="card-img-top" style="margin-top: 30px" >
+                <strong>{{ Auth::user()->name }}</strong> 
+                <a href="/home">  {{ '@'.Auth::user()->username }} </a> 
             </div>
-            <form method="POST" action="{{ route('tweet.store', Auth::user()->username) }}">
         </div>
         <div class="col-md-7">
             <div class="jumbotron">
@@ -57,3 +58,4 @@
     </div>
 </div>
 @endsection
+    

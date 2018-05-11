@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-dark navbar-laravel bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     {{ config('app.name', 'Laravel') }}
@@ -26,7 +26,7 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="" 
+                                <a class="dropdown-item" href="/edit" 
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                     Alterar Perfil
