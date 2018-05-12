@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return route('home');
     }
 
     /**
@@ -37,7 +37,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = new Image;
+        $image->user_id = Auth::user()->id;
+        $image->image = upload('images/', $request->image);
+        $image->save();
+
+        return redirect()->route('home');
     }
 
     /**
@@ -59,7 +64,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**

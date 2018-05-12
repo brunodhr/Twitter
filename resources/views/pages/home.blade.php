@@ -5,7 +5,11 @@
     <div class="row justify-content-md-center">
         <div class="col-md-2">
             <div class="card-header">
-                <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="card-img-top" style="margin-top: 30px" >
+                @if (Auth::user()->avatar == Null || Auth::user()->avatar->isEmpty())
+                        <p>Nenhuma imagem cadastrada</p>
+                    @else
+                            <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
+                @endif
                 <strong>{{ Auth::user()->name }}</strong> 
                 <a href="/home">  {{ '@'.Auth::user()->username }} </a> 
             </div>
