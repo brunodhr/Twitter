@@ -37,7 +37,7 @@ class tweetController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(), [
-            'content' => 'required|min:5'
+            'content' => 'required|max:255'
         ]);
 
         $tweet = new Tweet;
@@ -55,7 +55,7 @@ class tweetController extends Controller
      */
     public function show($id)
     {
-  
+        $tweet->user_id = Auth::user()->followeds->id;
     }
 
     /**
@@ -66,7 +66,7 @@ class tweetController extends Controller
      */
     public function edit($id)
     {
-     
+
     }
 
     /**
@@ -78,7 +78,7 @@ class tweetController extends Controller
      */
     public function update(Request $request, $id)
     { 
-//
+
     }
 
 

@@ -72,4 +72,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function edit($id)
+    {
+        $user = User::find($id);
+        return view('user.edit')->withUser($user);
+    }
+
 }

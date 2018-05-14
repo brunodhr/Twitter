@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark navbar-laravel bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     {{ config('app.name', 'Laravel') }}
@@ -34,7 +34,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    Sair
                                 </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
