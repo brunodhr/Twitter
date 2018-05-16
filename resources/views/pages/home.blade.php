@@ -5,7 +5,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-2">
             <div class="card-header">
-                @if (Auth::user()->avatar == Null || Auth::user()->avatar->isEmpty())
+                @if (Auth::user()->avatar == Null)
                         <p>Nenhuma imagem cadastrada</p>
                     @else
                             <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
@@ -45,7 +45,9 @@
                                     </span>
                                 @endif
                             </div>
-                            <button type="submit" class="btn btn-primary" style="float: right; width: 150px">Tweetar</button>
+                            <button type="submit" class="btn btn-primary">
+                                    Tweetar
+                                </button>
                         </form>
                     </div>
                 </div>

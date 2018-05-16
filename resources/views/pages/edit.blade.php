@@ -1,4 +1,5 @@
 @extends('main')
+@section('title','Editar')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -7,9 +8,12 @@
                 <div class="card-header">Editar</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('edit') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('home') }}" enctype="multipart/form-data">
                         @csrf
-
+                    <div class="col-md-3">
+                                    <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="card-img-top">
+                    </div>
+                </div>
 
                         <div class="form-group row">
 
@@ -19,10 +23,10 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Nome</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" autofocus>
+                                <input id="name" type="text" placeholder="Teste" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
@@ -87,10 +91,6 @@
                                 <button type="submit" class="btn btn-danger">
                                     Cancelar
                                 </button>
-                            </div>
-                        </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Editar
                                 </button>
