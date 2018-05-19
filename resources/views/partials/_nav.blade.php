@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    {{ config('app.name', 'Laravel') }}
+                    Laravel
                 </a>
                 <a class="navbar-brand" href="/home">
                     Home
@@ -26,8 +26,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}">Logar</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">Registrar</a></li>
                         @else
                         
                             <li class="nav-item dropdown">
