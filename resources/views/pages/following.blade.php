@@ -6,8 +6,10 @@
         <div class="col-md-8">
             @csrf
             <h3>
-                Seguindo
+                Seguindo  :  {{ Auth::user()->followeds->count() }}
             </h3>
+            <p>
+            <li class="list-group-item">{{ Auth::user()->followeds}}</li>
         </div>
         <div class="col-md-3 col-md-offset-1" style="margin-top:100px"><!--Adiciona barra ao lado direito do site  -->
             <h2>Side bar</h2>
