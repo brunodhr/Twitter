@@ -31,6 +31,6 @@ class HomeController extends Controller
             $tweets = $tweets->merge($followed->tweets);
         }
         $tweets = $tweets->sortByDesc('created_at');
-        return view('pages.home', compact('tweets'));
+        return view('pages.home', compact('tweets'));   
     }
 }

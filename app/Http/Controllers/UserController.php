@@ -51,9 +51,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($username)
     {
-        //
+        $user = User::where('username', $username)->first();
+        $tweets = $user->tweets->sortByDesc('created_at');
+
+        return view('users.show', compact('user', 'tweets'));
+
     }
 
     /**
@@ -64,7 +68,7 @@ class UserController extends Controller
      */
     public function edit()
     {
-        return view('pages.edit');
+        return view('users.edit');
     }
 
     /**

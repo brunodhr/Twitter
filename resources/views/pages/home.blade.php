@@ -8,10 +8,10 @@
                 @if (Auth::user()->avatar == Null)
                         <p>Nenhuma imagem cadastrada</p>
                     @else
-                            <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
+                        <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
                 @endif
                 <strong>{{ Auth::user()->name }}</strong> 
-                <a href="/home">  {{ '@'.Auth::user()->username }} </a> 
+                <a href="{{/Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 
             </div>
         </div>
         <div class="col-md-7">
@@ -38,7 +38,7 @@
                         <form method="POST" action="{{ route('tweet.store', Auth::user()->id) }}">
                             @csrf
                             <div class="form-group">
-                                <textarea class="form-control" name="content" id="content" rows="2" placeholder="Tuita pra nois" style="resize: none">{{ old('username') }}</textarea>
+                                <textarea class="form-control" name="content" id="content" rows="2" placeholder="Pelo visto não vai twittar né" style="resize: none">{{ old('username') }}</textarea>
                                 @if ($errors->has('content'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('content') }}</strong>

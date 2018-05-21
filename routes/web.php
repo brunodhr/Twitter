@@ -21,6 +21,8 @@ Route::get('/followers', function () {
     return view('pages.followers');
 });
 
+Route::get('/{user}', 'UserController@show')->name('user.show');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
