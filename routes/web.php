@@ -21,7 +21,6 @@ Route::get('/followers', function () {
     return view('pages.followers');
 });
 
-Route::get('/{user}', 'UserController@show')->name('user.show');
 
 Auth::routes();
 
@@ -32,3 +31,4 @@ Route::post('/home/{content}/tweet', 'TweetController@store')->name('tweet.store
 Route::get('/edit', 'UserController@edit')->name('upload.edit');
 Route::get('/upload', 'UserController@create')->name('upload.create');
 Route::post('/upload', 'UserController@store')->name('upload.store');
+Route::get('/{user}', 'UserController@show')->name('user.show');

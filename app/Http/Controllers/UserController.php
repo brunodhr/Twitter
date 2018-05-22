@@ -53,10 +53,12 @@ class UserController extends Controller
      */
     public function show($username)
     {
+
         $user = User::where('username', $username)->first();
         $tweets = $user->tweets->sortByDesc('created_at');
-
-        return view('users.show', compact('user', 'tweets'));
+        
+            return view('users.show', compact('user', 'tweets'));
+   
 
     }
 

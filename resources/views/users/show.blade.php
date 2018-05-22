@@ -1,7 +1,6 @@
 @extends('main')
 @section('title','Perfil')
 @section('content')
-
 	<div class="row justify-content-md-center">
         <div class="col-md-2">
             <div class="card-header" style="padding: 0">

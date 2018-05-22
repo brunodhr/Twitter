@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container">
+                @guest
                 <a class="navbar-brand" href="/">
                     Laravel
                 </a>
@@ -12,9 +13,23 @@
                 <a class="navbar-brand" href="/following">
                     Seguindo
                 </a>
-                <a class="navbar-brand" href="/{{Auth::user()->username}}">
+                @else
+                <a class="navbar-brand" href="/">
+                    Laravel
+                </a>
+                <a class="navbar-brand" href="/home">
+                    Home
+                </a>
+                <a class="navbar-brand" href="/followers">
+                    Seguidores
+                </a>
+                <a class="navbar-brand" href="/following">
+                    Seguindo
+                </a>
+                <a class="navbar-brand" href="/{{Auth::user()->username}}"> 
                     Perfil
                 </a>
+                @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

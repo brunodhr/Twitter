@@ -11,7 +11,7 @@
                         <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
                 @endif
                 <strong>{{ Auth::user()->name }}</strong> 
-                <a href="{{/Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 
+                <a href="/{{Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 
             </div>
         </div>
         <div class="col-md-7">
