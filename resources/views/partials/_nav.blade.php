@@ -8,9 +8,6 @@
                     Sobre nos
                 </a>
                 @else
-                <a class="navbar-brand" href="/">
-                    Laravel
-                </a>
                 <a class="navbar-brand" href="/home">
                     Home
                 </a>

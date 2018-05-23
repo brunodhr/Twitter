@@ -6,7 +6,7 @@
         <div class="col-md-2">
             <div class="card-header" style="border: 5px solid #000000; background-color: #A9A9A9">
                 @if (Auth::user()->avatar == Null)
-                        <p>Nenhuma imagem cadastrada</p>
+                        <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="img-fluid">
                     @else
                         <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
                 @endif
