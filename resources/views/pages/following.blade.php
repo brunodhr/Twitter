@@ -19,11 +19,13 @@
                 </div>
                 @endforeach
         </div>
-        <div class="col-md-3 col-md-offset-1" style="margin-top:100px"><!--Adiciona barra ao lado direito do site  -->
+    <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
+        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #A9A9A9">
             <h2>Side bar</h2>
             <a href="">Github</a>
             <p>
             <a href="">Twitter</a>
+            </div>
         </div>
     </div>
 </div>

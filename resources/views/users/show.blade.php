@@ -3,7 +3,7 @@
 @section('content')
 	<div class="row justify-content-md-center">
         <div class="col-md-2">
-            <div class="card-header" style="padding: 0">
+            <div class="card-header" style="border: 5px solid #000000; background-color: #A9A9A9">
                     <div class="card-body">
                         <strong>{{ $user->name }}</strong>
                         <p class="card-text">{{ '@'. $user->username }}</p>
@@ -20,11 +20,17 @@
                     <li class="list-group-item">Seguidores: {{ $user->followers->count() }}</li>
                     <li class="list-group-item">Seguindo: {{ $user->followeds->count() }}</li>
                 </ul>
-           
-
         </div>
         <div class="col-md-7">
             @include('tweets.show')
+        </div>
+        <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
+        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #A9A9A9">
+            <h2>Side bar</h2>
+            <a href="">Github</a>
+            <p>
+            <a href="">Twitter</a>
+            </div>
         </div>
     </div>
 

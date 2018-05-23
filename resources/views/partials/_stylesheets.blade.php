@@ -1,11 +1,13 @@
 <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                background-image: url("{{ asset('storage/background4.jpg')}}");
+                background-size: cover;
+                /*background-color: #00FFFF;*/
+                color: #000000;
+                font-family: 'Indie Flower', cursive;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+                margin: 20;
             }
 
             .full-height {
@@ -33,13 +35,15 @@
             }
 
             .title {
-                font-size: 84px;
+                margin-left: -250px;
+                margin-top: -200px;
+                font-size: 150px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #000000;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 50px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -49,4 +53,5 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
     </style>

@@ -4,14 +4,8 @@
                 <a class="navbar-brand" href="/">
                     Laravel
                 </a>
-                <a class="navbar-brand" href="/home">
-                    Home
-                </a>
-                <a class="navbar-brand" href="/followers">
-                    Seguidores
-                </a>
-                <a class="navbar-brand" href="/following">
-                    Seguindo
+                <a class="navbar-brand" href="/sobre">
+                    Sobre nos
                 </a>
                 @else
                 <a class="navbar-brand" href="/">
@@ -29,16 +23,15 @@
                 <a class="navbar-brand" href="/{{Auth::user()->username}}"> 
                     Perfil
                 </a>
+                <a class="navbar-brand" href="/users"> 
+                    Usuarios
+                </a>
                 @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

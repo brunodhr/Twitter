@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-2">
-            <div class="card-header">
+            <div class="card-header" style="border: 5px solid #000000; background-color: #A9A9A9">
                 @if (Auth::user()->avatar == Null)
                         <p>Nenhuma imagem cadastrada</p>
                     @else
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-md-7">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background-color: #000000 ">
 
                     @if (session('status'))
                         <div class="card-body">
@@ -47,7 +47,10 @@
                             </div>
                             <button type="submit" class="btn btn-primary">
                                     Tweetar
-                                </button>
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                    Anexar arquivo
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -55,11 +58,13 @@
             @include('tweets.show')
             
         </div>
-        <div class="col-md-3 col-md-offset-1" style="margin-top:100px"><!--Adiciona barra ao lado direito do site  -->
+        <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
+        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #A9A9A9">
             <h2>Side bar</h2>
             <a href="">Github</a>
             <p>
             <a href="">Twitter</a>
+            </div>
         </div>
     </div>
 </div>

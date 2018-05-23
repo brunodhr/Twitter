@@ -4,6 +4,7 @@
 <!--Teste outra linguagem-->
 <html lang="en">
   @include('partials._head')
+  @include('partials._stylesheets')
   
   <body>
 

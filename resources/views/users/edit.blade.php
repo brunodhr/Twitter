@@ -7,14 +7,14 @@
             <div class="card">
                 <div class="card-header">Editar</div>
 
-                <div class="card-body">
+                <div class="card-body" style="margin-left: -10px">
                     <form method="POST" action="{{ route('home') }}" enctype="multipart/form-data">
                         @csrf
                     <div class="col-md-3">
                                     <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="card-img-top">
                     </div>
                 </div>
-                        <div class="form-group row">
+                        <div class="form-group row" style="margin-top: -270px">
 
                             <label for = "avatar" class="col-md-4 col-form-label text-md-right">Avatar</label>
                             <div class="col-md-6">

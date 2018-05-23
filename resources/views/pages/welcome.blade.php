@@ -11,8 +11,9 @@
             
             <div class="grid">
                 <div class="title m-b-md">
-                    Teste
+                    Twitter
                 </div>
+
                 <div class="links">
                     @if(!Auth::id())
                         <a href="/login">Logar</a>
