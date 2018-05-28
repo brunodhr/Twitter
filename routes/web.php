@@ -14,12 +14,6 @@
 Route::get('/', function () {
     return view('pages.welcome');
 });
-Route::get('/following', function () {
-    return view('pages.following');
-});
-Route::get('/followers', function () {
-    return view('pages.followers');
-});
 Route::get('/sobre', function () {
     return view('pages.sobre');
 });
@@ -31,8 +25,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
  
 Route::post('/home/{content}/tweet', 'TweetController@store')->name('tweet.store');
- 
+Route::post('/f/{user}', 'UserController@follow')->name('user.follow')->middleware('auth');
+Route::post('/u/{user}', 'UserController@unfollow')->name('user.unfollow')->middleware('auth');
 Route::get('/edit', 'UserController@edit')->name('upload.edit');
 Route::get('/upload', 'UserController@create')->name('upload.create');
 Route::post('/upload', 'UserController@store')->name('upload.store');
 Route::get('/{user}', 'UserController@show')->name('user.show');
+
+Route::get('/{user}/edit', 'UserController@edit')->name('user.edit')->middleware('auth');
+Route::put('/{user}/edit', 'UserController@update')->name('user.update')->middleware('auth');
+
+Route::get('/{user}/followers', 'UserController@followers')->name('user.followers');
+Route::get('/{user}/followings', 'UserController@followings')->name('user.followings');
