@@ -30,11 +30,11 @@ class User extends Authenticatable
 
     public function followers(){
         return $this->belongsToMany('App\User','follows','user_followed_id','user_follower_id')
-                    ->where('user_followed_id',1);
+                    ->where('user_followed_id',$this->id);
     }
     public function followeds(){
         return $this->belongsToMany('App\User','follows','user_follower_id','user_followed_id')
-                    ->where('user_follower_id',1);
+                    ->where('user_follower_id',$this->id);
     }
 
     public function tweets(){

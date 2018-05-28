@@ -14,7 +14,7 @@
                                     <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="card-img-top">
                     </div>
                 </div>
-                        <div class="form-group row" style="margin-top: -270px">
+                        <div class="form-group row" style="margin-top: -100px">
 
                             <label for = "avatar" class="col-md-4 col-form-label text-md-right">Avatar</label>
                             <div class="col-md-6">
