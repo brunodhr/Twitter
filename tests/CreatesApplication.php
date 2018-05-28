@@ -7,8 +7,8 @@ use Illuminate\Contracts\Console\Kernel;
 trait CreatesApplication
 {
     /**
-     * Creates the application.
-     *
+     * Creates the application
+     * 
      * @return \Illuminate\Foundation\Application
      */
     public function createApplication()
