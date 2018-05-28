@@ -11,10 +11,10 @@
                 <a class="navbar-brand" href="/home">
                     Home
                 </a>
-                <a class="navbar-brand" href="/followers">
+                <a class="navbar-brand" href="/{{Auth::user()->username}}/followers">
                     Seguidores
                 </a>
-                <a class="navbar-brand" href="/following">
+                <a class="navbar-brand" href="/{{Auth::user()->username}}/followings">
                     Seguindo
                 </a>
                 <a class="navbar-brand" href="/{{Auth::user()->username}}"> 
