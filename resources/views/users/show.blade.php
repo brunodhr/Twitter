@@ -10,16 +10,28 @@
                         <p class="card-text">{{ '@'. $user->username }}</p>
                     </div>
             </div>
-                <ul class="list-group list-group-flush" style="max-width: 160px">
+                <ul class="list-group list-group-flush">
+                @if(!Auth::check())
                     
-                @if(!$user->followers->contains('id', Auth::user()->id))
-                    <li class="list-group-item"><button id="btn-follow" class="btn btn-primay" style="max-width: 120px">Seguir</button></li>
+                @elseif($user->followers->contains('id', Auth::user()->id))
+                    <li class="list-group-item">
+                        <form method="POST" action="{{ route('user.unfollow', $user->id) }}">
+                            @csrf
+                            <button type="submit" id="btn-unfollow" class="btn btn-primary">Deixar de seguir</button>
+                        </form>
+                    </li>
+                @elseif(Auth::user()->id == $user->id)
                 @else
-                    <li class="list-group-item"><button id="btn-unfollow" class="btn btn-primay">Parar de seguir</button></li>
+                    <li class="list-group-item">
+                        <form method="POST" action="{{ route('user.follow', $user->id) }}">
+                            @csrf
+                            <button type="submit" id="btn-follow" class="btn btn-primary">Seguir</button>
+                        </form>
+                    </li>
                 @endif
-                    <li class="list-group-item"> <a href="/">Tweets: {{ $user->tweets->count() }}</a></li>
-                    <li class="list-group-item"><a href="/followers">Seguidores: {{ $user->followers->count() }}</a></li>
-                    <li class="list-group-item"><a href="/followeds">Seguindo: {{ $user->followeds->count() }}</a></li>
+                    <li class="list-group-item">Tweets: {{ $user->tweets->count() }}</li>
+                    <li class="list-group-item"><a href="/{{$user->username}}/followers">Seguidores: {{ $user->followers->count() }}</a></li>
+                    <li class="list-group-item"><a href="/{{$user->username}}/followings">Seguindo: {{ $user->followeds->count() }}</a></li>
                 </ul>
         </div>
         <div class="col-md-7">
