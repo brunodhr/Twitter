@@ -59,8 +59,6 @@ class UserController extends Controller
         $tweets = $user->tweets->sortByDesc('created_at');
         
             return view('users.show', compact('user', 'tweets'));
-   
-
     }
 
     /**
@@ -73,7 +71,6 @@ class UserController extends Controller
     {
         return view('users.edit');
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -85,7 +82,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -95,5 +91,38 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function follow($followed_user_id)
+    {   
+        $user = Auth::user();
+        $followed_user = User::find($followed_user_id);
+        
+        if(!$user->followeds->contains('id', $followed_user->id)){
+            $user->followeds()->save($followed_user);
+        }
+        // return $this->show($followed_user->username);
+        return back();
+
+    }
+    public function unfollow($unfollowed_user_id)
+    {
+        $unfollowed_user = User::find($unfollowed_user_id);
+        $user = Auth::user();
+        if($user->followeds->contains('id', $unfollowed_user->id)){
+            $user->followeds()->detach($unfollowed_user);
+        }
+        return back();
+
+    }
+    public function followers($username){
+        $user = User::where('username', $username)->first();
+        $followers = $user->followers;
+        return view('pages.followers', compact('user', 'followers'));
+    }
+
+    public function followings($username){
+        $user = User::where('username', $username)->first();
+        $followings = $user->followings;
+        return view('pages.following', compact('user', 'followings'));
     }
 }
