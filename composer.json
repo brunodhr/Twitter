@@ -1,3 +1,4 @@
+/*Composer*/
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
@@ -58,3 +59,4 @@
     "minimum-stability": "dev",
     "prefer-stable": true
 }
+
