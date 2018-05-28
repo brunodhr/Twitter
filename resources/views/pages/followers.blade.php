@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-8">
+            @csrf
             <h3>
                 Seguidores  :  {{ Auth::user()->followers->count() }}
             </h3>

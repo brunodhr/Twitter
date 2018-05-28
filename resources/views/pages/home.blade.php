@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-2">
-            <div class="card-header" style="border: 5px solid #000000; background-color: #A9A9A9">
+            <div class="card-header" style="border: 5px solid #000000; background-color: #FFFFFF">
                 @if (Auth::user()->avatar == Null)
-                        <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="img-fluid">
+                        <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="img-fluid"> 
                     @else
                         <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
                 @endif
@@ -59,7 +59,7 @@
             
         </div>
         <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
-        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #A9A9A9">
+        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
             <h2>Side bar</h2>
             <a href="">Github</a>
             <p>

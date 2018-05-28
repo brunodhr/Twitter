@@ -1,9 +1,8 @@
 <style>
             html, body {
-                background-image: url("{{ asset('storage/background4.jpg')}}");
-                background-size: cover;
-                /*background-color: #00FFFF;*/
-                color: #000000;
+                /*background-image: url("{{ asset('storage/background4.jpg')}}");
+                background-size: cover;*/
+                background-color: #000000;
                 font-family: 'Indie Flower', cursive;
                 font-weight: 100;
                 height: 100vh;

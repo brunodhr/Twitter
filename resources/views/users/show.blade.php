@@ -3,7 +3,7 @@
 @section('content')
 	<div class="row justify-content-md-center">
         <div class="col-md-2">
-            <div class="card-header" style="border: 5px solid #000000; background-color: #A9A9A9">
+            <div class="card-header" style="border: 5px solid #000000; background-color: #FFFFFF">
                     <div class="card-body">
                         <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="img-fluid">
                         <strong>{{ $user->name }}</strong>
@@ -26,7 +26,7 @@
             @include('tweets.show')
         </div>
         <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
-        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #A9A9A9">
+        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
             <h2>Side bar</h2>
             <a href="https://www.github.com/brunodhr">Github</a>
             <p>
