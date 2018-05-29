@@ -1,3 +1,4 @@
+
 @foreach($tweets as $tweet)
 <div class="card" style="margin-top: 5px">
 	<div class="card-header" style="padding-left: 20px">
@@ -15,9 +16,8 @@
 				<form method="POST" action="{{ route('tweet.delete', $tweet->id) }}">
 					@csrf
 					{{ method_field("DELETE") }}
-					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="float: right">
-					  Excluir
-					</button>
+					<button class="btnexclui" data-toggle="modal"></button>
+					
 					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
@@ -38,6 +38,10 @@
 					  </div>
 					</div>
 			</form>
+			@else
+			<button class="btnlike"></button>
+			<button class="btnrt"></button>
+			<button class="btnresponde"></button>
 			@endif
 	</div>
 	<div class="card-body">
