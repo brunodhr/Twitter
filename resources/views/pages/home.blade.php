@@ -6,9 +6,9 @@
         <div class="col-md-2">
             <div class="card-header" style="border: 5px solid #000000; background-color: #FFFFFF">
                 @if (Auth::user()->avatar == Null)
-                        <img src="{{ asset('storage/avatars/avatar.jpg')}}" class="img-fluid"> 
+                        <img src="{{ asset('storage/avatar.png')}}" class="img-fluid"> 
                     @else
-                        <img src="{{ asset("storage/{Auth::user()->avatar}") }}" class="img-fluid">
+                        <img src="{{ asset("storage/{Auth::user()->avatar}")}}" class="img-fluid">
                 @endif
                 <strong>{{ Auth::user()->name }}</strong> 
                 <a href="/{{Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 

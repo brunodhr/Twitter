@@ -23,10 +23,12 @@ Route::get('/users', 'UserController@index')->name('user.index');
 Auth::routes();
  
 Route::get('/home', 'HomeController@index')->name('home');
- 
+
+Route::delete('/home/{tweet}/delete', 'TweetController@destroy')->name('tweet.delete')->middleware('auth');
+
 Route::post('/home/{content}/tweet', 'TweetController@store')->name('tweet.store');
-Route::post('/f/{user}', 'UserController@follow')->name('user.follow')->middleware('auth');
-Route::post('/u/{user}', 'UserController@unfollow')->name('user.unfollow')->middleware('auth');
+Route::post('/follow/{user}', 'UserController@follow')->name('user.follow');
+Route::post('/unfollow/{user}', 'UserController@unfollow')->name('user.unfollow');
 Route::get('/edit', 'UserController@edit')->name('upload.edit');
 Route::get('/upload', 'UserController@create')->name('upload.create');
 Route::post('/upload', 'UserController@store')->name('upload.store');

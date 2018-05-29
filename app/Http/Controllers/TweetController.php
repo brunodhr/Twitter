@@ -88,14 +88,13 @@ class tweetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tweet $tweet)
     {
-        $tweet = Tweet::find($id);
 
         $tweet->delete();
 
-        Session::flash('success','O tweet foi deletado com sucesso ');
-        return redirect()->route('tweets.index');
+        /*Session::flash('success','O tweet foi deletado com sucesso ');*/
+        return redirect()->route('home');
 
     }
 }

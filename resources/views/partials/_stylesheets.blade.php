@@ -40,9 +40,18 @@
             }
 
             .links > a {
-                color: #000000;
+                color: #FFFFFF;
                 padding: 0 25px;
-                font-size: 50px;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+           .links > p {
+                color: #FFFFFF;
+                padding: 0 25px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;

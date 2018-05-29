@@ -100,7 +100,6 @@ class UserController extends Controller
         if(!$user->followeds->contains('id', $followed_user->id)){
             $user->followeds()->save($followed_user);
         }
-        // return $this->show($followed_user->username);
         return back();
 
     }
