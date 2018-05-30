@@ -13,7 +13,7 @@
                 <div class="card" style="margin-top: 5px">
                     <div class="card-header" style="padding-left: 20px">
                             <ul style="float: left;list-style-type: none; margin-left: -20px; margin-top: -4px; margin-bottom: -5px">
-                                    <li><strong>{{ $follower->name }}</strong>   <a href="{{$follower->username}}">{{ '@'.$follower->username }}</a>
+                                    <li><strong>{{ $follower->name }}</strong>   <a href="/{{$follower->username}}">{{ '@'.$follower->username }}</a>
                             </ul>
                     </div>
                 </div>
