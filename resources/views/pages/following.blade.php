@@ -1,15 +1,15 @@
 @extends('main')
-@section('title','seguindo')
+@section('title','Seguindo')
 @section('content')
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-md-8">
             @csrf
             <h3>
-                Seguindo  :  {{ Auth::user()->followeds->count() }}
+                Seguindo  :  {{ $user->followeds->count() }}
             </h3>
             <p>
-            @foreach(Auth::user()->followeds as $followed)
+            @foreach($user->followeds as $followed)
                 <div class="card" style="margin-top: 5px">
                     <div class="card-header" style="padding-left: 20px">
                             <ul style="float: left;list-style-type: none; margin-left: -20px; margin-top: -4px; margin-bottom: -5px">

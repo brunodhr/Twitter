@@ -1,10 +1,10 @@
 @foreach($tweets as $tweet)
 <div class="card" style="margin-top: 5px">
 	<div class="card-header" style="padding-left: 20px">
-			@if (Auth::user()->avatar == Null)
+			@if($tweet->user->avatar == Null)
                         <img src="{{ asset('storage/avatar.png')}}" alt="avatar" class="img-fluid" style="width: 8%; float: left"> 
                     @else
-                        <img src="{{ asset("storage/{Auth::user()->avatar}")}}" alt="avatar" class="img-fluid" style="width: 8%; float: left">
+                        <img src="{{ asset("storage/avatars/1")}}" alt="avatar" class="img-fluid" style="width: 8%; float: left">
                @endif
 
 			<ul style="float: left;list-style-type: none; margin-left: -20px; margin-top: -4px; margin-bottom: -5px">
@@ -29,8 +29,9 @@
 					       {{ $tweet->content }}
 					      </div>
 					      <div class="modal-footer">
+					      	<button type="submit" class="btn btn-primary">Excluir</button>
 					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-					        <button type="submit" class="btn btn-primary">Excluir</button>
+					        
 					      </div>
 					    </div>
 					  </div>
