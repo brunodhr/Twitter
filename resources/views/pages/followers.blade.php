@@ -1,3 +1,4 @@
+<!--Tela de listagem dos usuarios seguidores-->
 @extends('main')
 @section('title','Seguidores')
 @section('content')

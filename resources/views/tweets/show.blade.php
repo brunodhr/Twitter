@@ -1,3 +1,4 @@
+<!--Partial para listagem de tweets-->
 @foreach($tweets as $tweet)
 <div class="card" style="margin-top: 5px">
 	<div class="card-header" style="padding-left: 20px">

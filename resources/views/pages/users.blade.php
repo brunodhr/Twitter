@@ -1,5 +1,6 @@
+<!--Tela de listagem de todos usuarios cadastrados-->
 @extends('main')
-@section('title','seguindo')
+@section('title','Usuarios')
 @section('content')
 <div class="container">
     <div class="row justify-content-md-center">
@@ -19,7 +20,7 @@
                 </div>
             @endforeach
         </div>
-    <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
+    <div class="col-md-3 col-md-offset-1">
         <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
             <h2>Side bar</h2>
             <a href="">Github</a>

@@ -1,11 +1,6 @@
+<!--Tela de apresentacao do site-->
 @extends('main')
 @section('title','Sobre')
-@include('partials._stylesheets')
-
-@section('stylesheets')
-  <link rel="stylesheet" type="text/css" href="styles.css">
-@endsection
-
 @section('content')
 <div class="container">
     <div class="row justify-content-md-center">
@@ -26,4 +21,4 @@
     </div>
 </div>
 @endsection
-    
+</html>

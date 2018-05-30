@@ -1,3 +1,4 @@
+<!--Tela principal do sistema-->
 @extends('main')
 @section('title','Home')
 @section('content')

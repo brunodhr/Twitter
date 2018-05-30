@@ -1,3 +1,4 @@
+<!--Tela de listagem dos usuarios seguidos-->
 @extends('main')
 @section('title','Seguindo')
 @section('content')
@@ -9,7 +10,7 @@
                 Seguindo  :  {{ $user->followeds->count() }}
             </h3>
             <p>
-            @foreach($user->followeds as $followed)
+                @foreach($user->followeds as $followed)
                 <div class="card" style="margin-top: 5px">
                     <div class="card-header" style="padding-left: 20px">
                             <ul style="float: left;list-style-type: none; margin-left: -20px; margin-top: -4px; margin-bottom: -5px">
@@ -18,8 +19,8 @@
                     </div>
                 </div>
                 @endforeach
-        </div>
-    <div class="col-md-3 col-md-offset-1">
+            </div>
+        <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
         <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
             <h2>Side bar</h2>
             <a href="">Github</a>
