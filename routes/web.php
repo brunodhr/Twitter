@@ -17,6 +17,12 @@ Route::get('/', function () {
 Route::get('/sobre', function () {
     return view('pages.sobre');
 });
+Route::get('/mensagens', function () {
+    return view('pages.dm');
+});
+Route::get('/notificacoes', function () {
+    return view('pages.notificacoes');
+});
 Route::get('/users', 'UserController@index')->name('user.index');
  
  
