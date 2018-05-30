@@ -5,10 +5,10 @@
     <div class="row justify-content-md-center">
         <div class="col-md-2">
             <div class="card-header" style="border: 5px solid #000000; background-color: #FFFFFF">
-                @if (Auth::user()->avatar == Null)
+                @if(Auth::user()->avatar == Null)
                         <img src="{{ asset('storage/avatar.png')}}" class="img-fluid"> 
                     @else
-                        <img src="{{ asset("storage/{Auth::user()->avatar}")}}" class="img-fluid">
+                        <img src="{{ asset("storage/avatars/1") }}" class="card-img-top">
                 @endif
                 <strong>{{ Auth::user()->name }}</strong> 
                 <a href="/{{Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 
@@ -38,7 +38,7 @@
                         <form method="POST" action="{{ route('tweet.store', Auth::user()->id) }}">
                             @csrf
                             <div class="form-group">
-                                <textarea class="form-control" name="content" id="content" rows="2" placeholder="Pelo visto não vai twittar né" style="resize: none">{{ old('username') }}</textarea>
+                                <textarea class="form-control" name="content" id="content" rows="2" placeholder="O que está acontecendo?" style="resize: none"></textarea>
                                 @if ($errors->has('content'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('content') }}</strong>

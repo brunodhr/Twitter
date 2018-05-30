@@ -25,7 +25,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::delete('/home/{tweet}/delete', 'TweetController@destroy')->name('tweet.delete')->middleware('auth');
-
 Route::post('/home/{content}/tweet', 'TweetController@store')->name('tweet.store');
 Route::post('/follow/{user}', 'UserController@follow')->name('user.follow');
 Route::post('/unfollow/{user}', 'UserController@unfollow')->name('user.unfollow');

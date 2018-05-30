@@ -2,7 +2,7 @@
 <!--include busca as partes do .blade que terão em todas paginas do site-->
 <!--yield busca as partes que terão em pages , o conteudo de cada pagina em si-->
 <!--Teste outra linguagem-->
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
   @include('partials._head')
   @include('partials._stylesheets')
   

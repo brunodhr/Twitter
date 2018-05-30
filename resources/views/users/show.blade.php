@@ -5,7 +5,11 @@
         <div class="col-md-2">
             <div class="card-header" style="border: 5px solid #000000; background-color: #FFFFFF">
                     <div class="card-body">
-                        <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="img-fluid">
+                        @if (Auth::user()->avatar == Null)
+                        <img src="{{ asset('storage/avatar.png')}}" class="img-fluid"> 
+                    @else
+                        <img src="{{ asset("storage/{Auth::user()->avatar}")}}" class="img-fluid">
+                    @endif
                         <strong>{{ $user->name }}</strong>
                         <p class="card-text">{{ '@'. $user->username }}</p>
                     </div>
