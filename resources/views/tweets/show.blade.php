@@ -3,10 +3,10 @@
 <div class="card" style="margin-top: 5px">
 	<div class="card-header" style="padding-left: 20px">
 			@if($tweet->user->avatar == Null)
-                        <img src="{{ asset('storage/avatar.png')}}" alt="avatar" class="img-fluid" style="width: 8%; float: left"> 
-                    @else
-                        <img src="{{ asset("storage/avatars/1")}}" alt="avatar" class="img-fluid" style="width: 8%; float: left">
-               @endif
+                <img src="{{ asset('storage/avatar.png')}}" alt="avatar" class="img-fluid" style="width: 8%; float: left"> 
+            @else
+                <img src="{{ asset('storage/avatars/'.$tweet->user->avatar) }}" alt="avatar" class="img-fluid" style="width: 8%; float: left">
+           @endif
 
 			<ul style="float: left;list-style-type: none; margin-left: -20px; margin-top: -4px; margin-bottom: -5px">
 					<li><strong>{{ $tweet->user->name }}</strong>   <a href="{{$tweet->user->username}}">{{ '@'.$tweet->user->username }}</a>

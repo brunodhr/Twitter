@@ -11,8 +11,12 @@
                 <div class="card-body" style="margin-left: -10px">
                     <form method="POST" action="{{ route('home') }}" enctype="multipart/form-data">
                         @csrf
-                    <div class="col-md-3">
-                                    <img src="{{ asset('storage/avatars/avatar.jpg')}}" alt="avatar" class="card-img-top">
+                    <div class="col-md-3" style="margin-bottom: -60px">
+                    @if(Auth::user()->avatar == Null)
+                        <img src="{{ asset('storage/avatar.png')}}" class="img-fluid"> 
+                    @else
+                        <img src="{{ asset('storage/avatars/'.Auth::user()->avatar) }}" class="card-img-top">
+                    @endif
                     </div>
                 </div>
                         <div class="form-group row" style="margin-top: -100px">

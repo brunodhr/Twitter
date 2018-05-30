@@ -9,7 +9,7 @@
                 @if(Auth::user()->avatar == Null)
                         <img src="{{ asset('storage/avatar.png')}}" class="img-fluid"> 
                     @else
-                        <img src="{{ asset("storage/avatars/1") }}" class="card-img-top">
+                        <img src="{{ asset('storage/avatars/'.Auth::user()->avatar) }}" class="card-img-top">
                 @endif
                 <strong>{{ Auth::user()->name }}</strong> 
                 <a href="/{{Auth::user()->username}}">  {{ '@'.Auth::user()->username }} </a> 
