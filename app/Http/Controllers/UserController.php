@@ -61,37 +61,27 @@ class UserController extends Controller
             return view('users.show', compact('user', 'tweets'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit()
     {
         return view('users.edit');
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+    $user = User::findOrFail($id);
+        $array = $request->all();
+        if(!empty($array['avatar']))
+            $array['avatar'] = upload_avatar('avatars/', $array['avatar'], $array['id']);
+        $user->update($array);
+        return redirect('/home');
+        // return redirect('/edit');
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        
     }
+
     public function follow($followed_user_id)
     {   
         $user = Auth::user();
