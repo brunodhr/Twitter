@@ -39,8 +39,12 @@ Route::get('/upload', 'UserController@create')->name('upload.create');
 Route::post('/upload', 'UserController@store')->name('upload.store');
 Route::get('/{user}', 'UserController@show')->name('user.show');
 
+Route::get('/{user}/followers', 'UserController@followers')->name('user.followers');
+Route::get('/{user}/followings', 'UserController@followings')->name('user.followings');
+
+
 Route::get('/{user}/edit', 'UserController@edit')->name('user.edit')->middleware('auth');
 Route::put('/{user}/edit', 'UserController@update')->name('user.update')->middleware('auth');
 
-Route::get('/{user}/followers', 'UserController@followers')->name('user.followers');
-Route::get('/{user}/followings', 'UserController@followings')->name('user.followings');
+// Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+// Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
