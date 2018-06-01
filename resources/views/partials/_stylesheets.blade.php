@@ -61,46 +61,9 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            .btnexclui {
-                background-image: url("{{ asset('storage/lixeira.jpg')}}");
+            .btntweets {
                 background-size: 80%;
-                background-color: white;
-                background-position: center;
-                background-repeat: no-repeat;
-                float: right;
-                border: none; /* Remove borders */
-                padding: 15px 16px; /* Some padding */
-                font-size: 16px; /* Set a font size */
-                cursor: pointer; /* Mouse pointer on hover */
-            }
-            .btnlike {
-                background-image: url("{{ asset('storage/like.jpg')}}");
-                background-size: 80%;
-                background-color: white;
-                background-position: center;
-                background-repeat: no-repeat;
-                float: right;
-                border: none; /* Remove borders */
-                padding: 12px 16px; /* Some padding */
-                font-size: 16px; /* Set a font size */
-                cursor: pointer; /* Mouse pointer on hover */
-            }
-            .btnrt {
-                background-image: url("{{ asset('storage/retweet.jpg')}}");
-                background-size: 80%;
-                background-color: white;
-                background-position: center;
-                background-repeat: no-repeat;
-                float: right;
-                border: none; /* Remove borders */
-                padding: 12px 16px; /* Some padding */
-                font-size: 16px; /* Set a font size */
-                cursor: pointer; /* Mouse pointer on hover */
-            }
-            .btnresponde{
-                background-image: url("{{ asset('storage/responder.jpg')}}");
-                background-size: 80%;
-                background-color: white;
+                background-color: transparent;
                 background-position: center;
                 background-repeat: no-repeat;
                 float: right;

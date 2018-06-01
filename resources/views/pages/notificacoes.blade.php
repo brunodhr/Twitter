@@ -21,12 +21,16 @@
                 @endforeach
             </div>
         <div class="col-md-3 col-md-offset-1"><!--Adiciona barra ao lado direito do site  -->
-        <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
-            <h2>Side bar</h2>
-            <a href="">Github</a>
-            <p>
-            <a href="">Twitter</a>
+            <div class="card-header"style="margin-top:30px; border: 5px solid #000000; background-color: #FFFFFF">
+                <h2><i class="fas fa-link"></i>Links</h2>
+                <a href=""><i class="fab fa-github"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-slack"></i></a>
             </div>
+        </div>
         </div>
     </div>
 </div>

@@ -16,7 +16,7 @@
 				<form method="POST" action="{{ route('tweet.delete', $tweet->id) }}">
 					@csrf
 					{{ method_field("DELETE") }}
-					<button type="button" class="btnexclui" data-toggle="modal" data-target="#exampleModal"></button>
+					<button type="button" class="btntweets" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash"></i></button>
 					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
@@ -30,7 +30,7 @@
 					       {{ $tweet->content }}
 					      </div>
 					      <div class="modal-footer">
-					      	<button type="submit" class="btn btn-primary">Excluir</button>
+					      	<button type="submit" class="btn btn-primary"><i class="fas fa-trash"></i></button>
 					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
 					        
 					      </div>
@@ -39,9 +39,9 @@
 					</div>
 				</form>
 			@else
-			<button class="btnlike"></button>
-			<button class="btnrt"></button>
-			<button class="btnresponde"></button>
+			<button class="btntweets"><i class="fas fa-thumbs-up"></i></button>
+			<button class="btntweets"><i class="fas fa-retweet"></i></button>
+			<button class="btntweets"><i class="fas fa-reply"></i></button>
 			@endif
 	</div>
 	<div class="card-body">

@@ -9,25 +9,26 @@
                 </a>
                 @else
                 <a class="navbar-brand" href="/home">
-                    Home
+                    <i class="fas fa-home"></i>
                 </a>
                 <a class="navbar-brand" href="/{{Auth::user()->username}}/followers">
-                    Seguidores
+                    <i class="fas fa-address-book"></i>
                 </a>
                 <a class="navbar-brand" href="/{{Auth::user()->username}}/followings">
-                    Seguindo
+                    <i class="far fa-address-book"></i>
                 </a>
                 <a class="navbar-brand" href="/{{Auth::user()->username}}"> 
-                    Perfil
+                    <i class="fas fa-user"></i>
                 </a>
                 <a class="navbar-brand" href="/users"> 
-                    Usuarios
+                    <i class="fas fa-hashtag"></i>
                 </a>
-                <a class="navbar-brand" href="/notificacoes"> 
-                    Notificacoes
-                </a>
+                <a class="navbar-brand" href="/notificacoes">
+                    <i class="fas fa-bell"></i>
+                </a> 
+                    
                 <a class="navbar-brand" href="/mensagens"> 
-                    Mensagem direta
+                    <i class="fas fa-envelope" style="width: 150%"></i>
                 </a>
                 @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,12 +51,12 @@
                                 </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/edit">
-                                    Alterar Perfil
+                                    <i class="fas fa-user-edit">Editar</i>
                                 </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                    Sair
+                                    <i class="fas fa-sign-out-alt">Sair</i>
                                 </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
