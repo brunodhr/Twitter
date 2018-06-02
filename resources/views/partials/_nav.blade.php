@@ -11,12 +11,12 @@
                 <a class="navbar-brand" href="/home">
                     <i class="fas fa-home"></i>
                 </a>
-                <a class="navbar-brand" href="/{{Auth::user()->username}}/followers">
+                <!-- <a class="navbar-brand" href="/{{Auth::user()->username}}/followers">
                     <i class="fas fa-address-book"></i>
                 </a>
                 <a class="navbar-brand" href="/{{Auth::user()->username}}/followings">
                     <i class="far fa-address-book"></i>
-                </a>
+                </a> -->
                 <a class="navbar-brand" href="/{{Auth::user()->username}}"> 
                     <i class="fas fa-user"></i>
                 </a>
