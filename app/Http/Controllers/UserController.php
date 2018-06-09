@@ -113,5 +113,5 @@ class UserController extends Controller
         $user = User::where('username', $username)->first();
         $followings = $user->followings;
         return view('pages.following', compact('user', 'followings'));
-    }
+    }    
 }
