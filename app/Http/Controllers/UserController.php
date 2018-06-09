@@ -68,14 +68,14 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-    $user = User::findOrFail($id);
+        $user = User::find($id);
         $array = $request->all();
         if(!empty($array['avatar']))
             $array['avatar'] = upload_avatar('avatars/', $array['avatar'], $array['id']);
         $user->update($array);
-        return redirect('/home');
-        // return redirect('/edit');
-    }
+        //return redirect('/home');
+        return redirect('/edit');
+        }
 
     public function destroy($id)
     {
